@@ -1,5 +1,8 @@
 package com.realdolmen.course;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * Hello world!
  */
@@ -12,6 +15,9 @@ public class App {
         /*Runnable r = () -> {
             System.out.println("Hello World");
         };*/
+        final Logger logger  = LoggerFactory.getLogger(App.class);
+
+        logger.info("Example action excecuted");
 
         try {
             int i = 0;
@@ -21,6 +27,8 @@ public class App {
         } catch (Exception e) {
             System.out.println("Hello");
         }
+
+        logger.warn("Be cautious!");
     }
 
     public App(int a){
